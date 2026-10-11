@@ -15,34 +15,19 @@ import java.util.Locale
 
 class OfficeOneApplication : Application() {
 
-    var database: OfficeOneDatabase? = null
-        private set
+    val database: OfficeOneDatabase by lazy {
+        OfficeOneDatabase.getInstance(this)
+    }
 
-    var preferencesManager: PreferencesManager? = null
-        private set
+    val preferencesManager: PreferencesManager by lazy {
+        PreferencesManager.getInstance(this)
+    }
 
     override fun onCreate() {
         super.onCreate()
         instance = this
 
         setupCrashHandler()
-        initializeSingletons()
-    }
-
-    private fun initializeSingletons() {
-        // Initialize Room Database
-        try {
-            database = OfficeOneDatabase.getInstance(this)
-        } catch (e: Throwable) {
-            Log.e(TAG, "Failed to initialize Room Database", e)
-        }
-
-        // Initialize PreferencesManager
-        try {
-            preferencesManager = PreferencesManager.getInstance(this)
-        } catch (e: Throwable) {
-            Log.e(TAG, "Failed to initialize PreferencesManager", e)
-        }
 
         // Initialize PDFBox resource loader for Android
         try {
