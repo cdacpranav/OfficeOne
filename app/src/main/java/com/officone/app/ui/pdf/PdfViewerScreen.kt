@@ -375,7 +375,7 @@ fun PdfViewerScreen(
                                     .padding(horizontal = 12.dp, vertical = 6.dp)
                                     .shadow(4.dp, RoundedCornerShape(2.dp))
                                     .clip(RoundedCornerShape(2.dp))
-                                    .background(Color.WHITE)
+                                    .background(Color.White)
                                     .fillMaxWidth()
                                     .height(480.dp),
                                 contentAlignment = Alignment.Center

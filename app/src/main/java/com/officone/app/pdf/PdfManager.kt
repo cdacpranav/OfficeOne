@@ -12,10 +12,9 @@ import com.tom_roush.pdfbox.pdmodel.PDPage
 import com.tom_roush.pdfbox.pdmodel.common.PDRectangle
 import com.tom_roush.pdfbox.pdmodel.interactive.action.PDActionURI
 import com.tom_roush.pdfbox.pdmodel.interactive.annotation.PDAnnotation
-import com.tom_roush.pdfbox.pdmodel.interactive.annotation.PDAnnotationHighlight
 import com.tom_roush.pdfbox.pdmodel.interactive.annotation.PDAnnotationLink
 import com.tom_roush.pdfbox.pdmodel.interactive.annotation.PDAnnotationText
-import com.tom_roush.pdfbox.pdmodel.interactive.annotation.PDAnnotationUnderline
+import com.tom_roush.pdfbox.pdmodel.interactive.annotation.PDAnnotationTextMarkup
 import com.tom_roush.pdfbox.pdmodel.interactive.form.PDAcroForm
 import com.tom_roush.pdfbox.pdmodel.interactive.form.PDField
 import com.tom_roush.pdfbox.pdmodel.interactive.form.PDTextField
@@ -189,7 +188,7 @@ class PdfManager : Closeable {
             val page = doc.getPage(pageIndex)
             val pdAnnotation: PDAnnotation = when (annotation) {
                 is PdfAnnotation.Highlight -> {
-                    PDAnnotationHighlight().apply {
+                    PDAnnotationTextMarkup(PDAnnotationTextMarkup.SUB_TYPE_HIGHLIGHT).apply {
                         val rect = PDRectangle(
                             annotation.rect.left,
                             annotation.rect.top,
@@ -207,7 +206,7 @@ class PdfManager : Closeable {
                     }
                 }
                 is PdfAnnotation.Underline -> {
-                    PDAnnotationUnderline().apply {
+                    PDAnnotationTextMarkup(PDAnnotationTextMarkup.SUB_TYPE_UNDERLINE).apply {
                         val rect = PDRectangle(
                             annotation.rect.left,
                             annotation.rect.top,

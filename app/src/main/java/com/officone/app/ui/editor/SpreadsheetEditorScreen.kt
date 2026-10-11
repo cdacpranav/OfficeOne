@@ -374,6 +374,7 @@ fun SpreadsheetEditorScreen(
                                         val cellRef = "$colName$rowNum"
                                         val rawValue = cellData[cellRef] ?: ""
                                         val displayValue = evaluatedCellData[cellRef] ?: rawValue
+                                        val isSelected = (selectedCell == cellRef)
 
                                         Box(
                                             modifier = Modifier

@@ -49,13 +49,7 @@ class MainActivity : ComponentActivity() {
             val themeMode by (preferencesManager?.themeMode
                 ?: kotlinx.coroutines.flow.flowOf(ThemeMode.SYSTEM)).collectAsState(initial = ThemeMode.SYSTEM)
 
-            val isDarkTheme = when (themeMode) {
-                ThemeMode.LIGHT -> false
-                ThemeMode.DARK -> true
-                ThemeMode.SYSTEM -> isSystemInDarkTheme()
-            }
-
-            OfficeOneTheme(darkTheme = isDarkTheme) {
+            OfficeOneTheme(themeMode = themeMode) {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     val navController = rememberNavController()
 
