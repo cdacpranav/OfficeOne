@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Details -->
+    <string name="app_name">Office One</string>
+    <string name="app_version_format">Version %s</string>
+    <string name="about_office_one">Office One is a privacy-first, zero-permission mobile productivity suite for viewing and editing documents, spreadsheets, presentations, and PDFs on Android.</string>
+
+    <!-- General Actions -->
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_save_as">Save As</string>
+    <string name="action_open">Open</string>
+    <string name="action_close">Close</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_share">Share</string>
+    <string name="action_print">Print</string>
+    <string name="action_search">Search</string>
+    <string name="action_search_hint">Find in document…</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_recover">Recover</string>
+    <string name="action_retry">Retry</string>
+
+    <!-- Ribbon Navigation Tabs -->
+    <string name="tab_home">Home</string>
+    <string name="tab_insert">Insert</string>
+    <string name="tab_design">Design</string>
+    <string name="tab_layout">Layout</string>
+    <string name="tab_references">References</string>
+    <string name="tab_review">Review</string>
+    <string name="tab_view">View</string>
+
+    <!-- Format & Editing Operations -->
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_underline">Underline</string>
+    <string name="format_strikethrough">Strikethrough</string>
+    <string name="format_font_size">Font Size</string>
+    <string name="format_font_color">Font Color</string>
+    <string name="format_highlight_color">Highlight Color</string>
+    <string name="format_align_left">Align Left</string>
+    <string name="format_align_center">Align Center</string>
+    <string name="format_align_right">Align Right</string>
+    <string name="format_align_justify">Justify</string>
+    <string name="format_bullets">Bullets</string>
+    <string name="format_numbering">Numbering</string>
+    <string name="format_increase_indent">Increase Indent</string>
+    <string name="format_decrease_indent">Decrease Indent</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_redo">Redo</string>
+    <string name="action_cut">Cut</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_paste">Paste</string>
+    <string name="action_insert_table">Insert Table</string>
+    <string name="action_insert_image">Insert Image</string>
+    <string name="action_insert_link">Insert Hyperlink</string>
+    <string name="action_insert_page_break">Page Break</string>
+    <string name="action_insert_shape">Insert Shape</string>
+
+    <!-- PDF Features -->
+    <string name="pdf_viewer_title">PDF Viewer</string>
+    <string name="pdf_page_indicator">Page %1$d of %2$d</string>
+    <string name="pdf_rendering_page">Rendering page %d…</string>
+    <string name="pdf_annotate">Annotate</string>
+    <string name="pdf_annotate_highlight">Highlight</string>
+    <string name="pdf_annotate_underline">Underline</string>
+    <string name="pdf_annotate_note">Add Note</string>
+    <string name="pdf_annotate_draw">Freehand Draw</string>
+    <string name="pdf_zoom_in">Zoom In</string>
+    <string name="pdf_zoom_out">Zoom Out</string>
+    <string name="pdf_fit_width">Fit to Width</string>
+    <string name="pdf_merge_title">Merge PDFs</string>
+    <string name="pdf_split_title">Split PDF</string>
+    <string name="pdf_properties">Document Properties</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_general">General</string>
+    <string name="settings_dark_mode">Theme &amp; Appearance</string>
+    <string name="settings_auto_save">Auto-Save Documents</string>
+    <string name="settings_auto_save_interval">Auto-Save Interval</string>
+    <string name="settings_engine_preference">Document Engine Preference</string>
+    <string name="settings_about">About Office One</string>
+    <string name="settings_privacy">Zero-Permission Guarantee</string>
+
+    <!-- Document Recovery & Autosave -->
+    <string name="recovery_prompt_title">Document Recovery</string>
+    <string name="recovery_prompt_message">Office One found unsaved recovery files from an unexpected closure. Would you like to restore your work?</string>
+    <string name="recovery_no_files">No recoverable documents found.</string>
+
+    <!-- Errors and Alerts -->
+    <string name="error_file_not_found">The requested file could not be found.</string>
+    <string name="error_unsupported_format">This document format is not currently supported.</string>
+    <string name="error_document_load_failed">Failed to load document.</string>
+    <string name="error_document_save_failed">Failed to save document. Please check storage permissions.</string>
+    <string name="error_corrupt_file">The file appears to be damaged or corrupt.</string>
+    <string name="error_out_of_memory">Memory limit reached while rendering pages.</string>
+</resources>
