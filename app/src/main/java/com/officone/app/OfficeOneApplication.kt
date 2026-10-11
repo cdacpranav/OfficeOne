@@ -15,10 +15,10 @@ import java.util.Locale
 
 class OfficeOneApplication : Application() {
 
-    lateinit var database: OfficeOneDatabase
+    var database: OfficeOneDatabase? = null
         private set
 
-    lateinit var preferencesManager: PreferencesManager
+    var preferencesManager: PreferencesManager? = null
         private set
 
     override fun onCreate() {
@@ -31,10 +31,18 @@ class OfficeOneApplication : Application() {
 
     private fun initializeSingletons() {
         // Initialize Room Database
-        database = OfficeOneDatabase.getInstance(this)
+        try {
+            database = OfficeOneDatabase.getInstance(this)
+        } catch (e: Throwable) {
+            Log.e(TAG, "Failed to initialize Room Database", e)
+        }
 
         // Initialize PreferencesManager
-        preferencesManager = PreferencesManager.getInstance(this)
+        try {
+            preferencesManager = PreferencesManager.getInstance(this)
+        } catch (e: Throwable) {
+            Log.e(TAG, "Failed to initialize PreferencesManager", e)
+        }
 
         // Initialize PDFBox resource loader for Android
         try {

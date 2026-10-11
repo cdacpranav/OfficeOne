@@ -17,9 +17,10 @@ import kotlinx.coroutines.withContext
 import java.io.File
 
 class SpreadsheetEditorViewModel(
-    application: Application,
-    private val safFileHandler: SAFFileHandler = SAFFileHandler()
+    application: Application
 ) : AndroidViewModel(application) {
+
+    private val safFileHandler = SAFFileHandler()
 
     private val _documentInfo = MutableStateFlow<DocumentInfo?>(null)
     val documentInfo: StateFlow<DocumentInfo?> = _documentInfo.asStateFlow()

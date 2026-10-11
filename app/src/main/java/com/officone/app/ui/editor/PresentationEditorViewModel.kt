@@ -25,9 +25,10 @@ data class SlideData(
 )
 
 class PresentationEditorViewModel(
-    application: Application,
-    private val safFileHandler: SAFFileHandler = SAFFileHandler()
+    application: Application
 ) : AndroidViewModel(application) {
+
+    private val safFileHandler = SAFFileHandler()
 
     private val _documentInfo = MutableStateFlow<DocumentInfo?>(null)
     val documentInfo: StateFlow<DocumentInfo?> = _documentInfo.asStateFlow()
